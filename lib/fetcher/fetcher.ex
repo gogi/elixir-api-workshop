@@ -1,7 +1,11 @@
 defmodule Apifrenzy.Fetcher do
 
   def fetcher do
-    data_set = HTTPotion.get(source).body
+    File.write("postal_codes_in_poland.json", data_set)
+  end
+
+  def data_set do
+    HTTPotion.get(source).body
   end
 
   def source do
