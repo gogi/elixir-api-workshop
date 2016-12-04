@@ -1,0 +1,2 @@
+defmodule Apifrenzy do
+end
