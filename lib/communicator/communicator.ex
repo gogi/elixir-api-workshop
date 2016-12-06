@@ -14,7 +14,7 @@ defmodule Apifrenzy.Communicator do
     # auth_data = {username, password}
     request = %{
       "from"    => "ElixirLive",
-      "to"      => "***REMOVED***",
+      "to"      => send_to,
       "message" => "#{message}"
     }
 
@@ -33,5 +33,9 @@ defmodule Apifrenzy.Communicator do
 
   def password do
     System.get_env("password")
+  end
+
+  def send_to do
+    System.get_env("send_to")
   end
 end
